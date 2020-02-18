@@ -1,4 +1,6 @@
-// Тут хранятся настройки кнопок, ссылок, основные элементы и тд.
+* 
+  box-sizing: border-box
+  // Тут хранятся настройки кнопок, ссылок, основные элементы и тд.
 body
   +reg
 // Всегда нужно сбрасывать ширену для все картинок
@@ -12,3 +14,20 @@ img
   background-color: $main-color
   border: none
   padding: 18px 30px
+  &:hover
+    // Позволяет зделать основной цвет светлее, darken() затемняет цвет
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+.section
+  padding: 90px 0 
+  &-title
+    font-size: 24px
+    +bold
+  &-subtitle
+    display: block
+    font-size: 16px
+.input
+  border: 1px solid $border-input
+  padding: 20px 26px
+  font-size: 15px
+  border-radius: 10px
