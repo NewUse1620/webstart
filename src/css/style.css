@@ -39,6 +39,7 @@ img {
   background-color: #ffd200;
   border: none;
   padding: 18px 30px;
+  outline: none;
 }
 
 .button:hover {
@@ -66,6 +67,11 @@ img {
   padding: 20px 26px;
   font-size: 15px;
   border-radius: 10px;
+}
+
+.input:focus {
+  border-color: #ffd200;
+  outline: none;
 }
 
 /* Импорт стилей шапки */
@@ -240,6 +246,39 @@ img {
   min-height: 70px;
 }
 
+.offer-return {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-top: 25px;
+}
+
+.offer-return .return-block {
+  margin-right: 55px;
+}
+
+.offer-return .return-block:last-child {
+  margin-right: 0;
+}
+
+.offer-return .return-block__call {
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.offer-return .return-block__phone {
+  display: inline-block;
+  margin-top: 5px;
+  color: #333333;
+  text-decoration: none;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 760px;
@@ -265,6 +304,18 @@ img {
   }
   .offer__button {
     font-size: 13px;
+  }
+  .offer-return {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer-return .return-block {
+    margin-bottom: 8px;
+  }
+  .offer-return .return-block__phone {
+    margin-top: 8px;
   }
 }
 
@@ -299,6 +350,7 @@ img {
     font-size: 12px;
   }
   .hero__image {
+    margin-top: 44px;
     margin-right: 15px;
   }
   .offer {
@@ -308,5 +360,38 @@ img {
     width: 100%;
     padding-right: 0;
   }
+}
+
+/* Подключение Стили модального окна */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-width: 200px;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */

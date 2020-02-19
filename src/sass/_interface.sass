@@ -1,33 +1,40 @@
 * 
-  box-sizing: border-box
-  // Тут хранятся настройки кнопок, ссылок, основные элементы и тд.
+    box-sizing: border-box
+    // Тут хранятся настройки кнопок, ссылок, основные элементы и тд.
 body
-  +reg
-// Всегда нужно сбрасывать ширену для все картинок
+    +reg
+    // Всегда нужно сбрасывать ширену для все картинок
 img
-  max-width: 100%
+    max-width: 100%
 .container
-  width: 1170px
-  margin: auto
+    width: 1170px
+    margin: auto
 .button
-  border-radius: 10px
-  background-color: $main-color
-  border: none
-  padding: 18px 30px
-  &:hover
-    // Позволяет зделать основной цвет светлее, darken() затемняет цвет
-    background-color: lighten($main-color, 10%)
-    cursor: pointer
+    border-radius: 10px
+    background-color: $main-color
+    border: none
+    padding: 18px 30px
+    outline: none
+    &:hover
+        // Позволяет зделать основной цвет светлее, darken() затемняет цвет
+        background-color: lighten($main-color, 10%)
+        cursor: pointer
+        
 .section
-  padding: 90px 0 
-  &-title
-    font-size: 24px
-    +bold
-  &-subtitle
-    display: block
-    font-size: 16px
+    padding: 90px 0 
+    &-title
+        font-size: 24px
+        +bold
+    &-subtitle
+        display: block
+        font-size: 16px
 .input
-  border: 1px solid $border-input
-  padding: 20px 26px
-  font-size: 15px
-  border-radius: 10px
+    border: 1px solid $border-input
+    padding: 20px 26px
+    font-size: 15px
+    border-radius: 10px
+    &:focus
+        border-color: $main-color
+        outline: none
+
+
